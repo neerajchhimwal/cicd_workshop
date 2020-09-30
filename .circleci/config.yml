@@ -15,8 +15,9 @@ jobs:
           command: |
             echo 'hello world'
             sudo chown -R circleci circleci .
-            ./ci/setup.sh
             chmod -R +rwx ./ci
+            ./ci/setup.sh
+          name: Setup
 
 
 workflows:
