@@ -10,7 +10,7 @@ jobs:
     executor: python_docker
     steps:
       - checkout:
-          - path: ~/project
+        path: ~/project
       - run:
           command: |
             echo 'hello world'
