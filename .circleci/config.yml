@@ -9,9 +9,15 @@ jobs:
   build:
     executor: python_docker
     steps:
+      - checkout:
+          - path: ~/project
       - run:
           command: |
             echo 'hello world'
+            sudo chown -R circleci circleci .
+            ./ci/setup.sh
+            chmod -R +rwx ./ci
+
 
 workflows:
   build_test_deploy:
