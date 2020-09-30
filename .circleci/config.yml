@@ -19,6 +19,11 @@ jobs:
             ./ci/setup.sh
           name: Setup
 
+      - run:
+          command: ./ci/run_tests.sh
+          name: Run Tests
+
+
 
 workflows:
   build_test_deploy:
